@@ -8,6 +8,8 @@
     <title>Portifólio</title>
     <link rel="stylesheet" href="style-responsivo.css">
     <link rel="shortcut icon" href="Imagens/cv.png" type="image/x-icon">
+    <!--<link rel="stylesheet" href="Arquivos/fontawesome-free-6.3.0-web/css/all.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
 </head>
 
@@ -19,26 +21,23 @@
                 class="user-foto">
 
             <div class="user-detalhes">
-                <h3>João Marcos</h3><br>
+                <h2>João Marcos</h2><br>
                 <small>Desenvolvedor</small>
             </div>
         </div>
         <ul>
-            <li><img src="Imagens/home.png" alt=""><a href="#">Home</a></li>
-            <li><img src="Imagens/information-button.png" alt=""><a href="#">Sobre</a></li>
-            <li><img src="Imagens/mortarboard.png" alt=""><a href="#">Formação</a></li>
-            <li><img src="Imagens/project-management.png" alt=""><a href="#">Projetos</a></li>
-            <li><img src="Imagens/phone.png" alt=""><a href="#">Contato</a></li>
+            <li><i class="fa fa-solid fa-house"></i><a href="#home">Home</a></li>
+            <li><i class="fa fa-solid fa-address-card"></i><a href="#sobre">Sobre</a></li>
+            <li><i class="fa-solid fa-school"></i><a href="#formacao">Formação</a></li>
+            <li><i class="fa-solid fa-code"></i><a href="#projetos">Projetos</a></li>
+            <li><i class="fa-solid fa-phone"></i><a href="#contato">Contato</a></li>
         </ul>
-        <div class="estilo-rodape">
-            <p>João Marcos 2023 &copy;copyright </p>
-        </div>
+
     </nav>
 
     <header>
-
         <div class="menu-logo">
-            <img src="Imagens/burger-bar.png" alt="" id="menu-btn">
+            <i class="fa fa-solid fa-bars" id="menu-btn"></i>
 
         </div>
 
@@ -46,42 +45,58 @@
             <h2>Portifólio</h2>
         </div>
 
-        <ul class="menu-list">
-            <li><img src="Imagens/home.png" alt=""><a href="#">Home</a></li>
-            <li><img src="Imagens/information-button.png" alt=""><a href="#">Sobre</a></li>
-            <li><img src="Imagens/mortarboard.png" alt=""><a href="#">Formação</a></li>
-            <li><img src="Imagens/project-management.png" alt=""><a href="#">Projetos</a></li>
-            <li><img src="Imagens/phone.png" alt=""><a href="#">Contato</a></li>
+        <ul class="menu-list" id="menu_list">
+            <li><i class="fa fa-solid fa-house"></i><a href="#home">Home</a></li>
+            <li><i class="fa fa-solid fa-address-card"></i><a href="#sobre">Sobre</a></li>
+            <li><i class="fa-solid fa-school"></i><a href="#formacao">Formação</a></li>
+            <li><i class="fa-solid fa-code"></i><a href="#projetos">Projetos</a></li>
+            <li><i class="fa-solid fa-phone"></i><a href="#contato">Contato</a></li>
         </ul>
 
     </header>
-    <section class="imagem" id="imagem">
-        <div class="card-imagem">
-            <img src="Imagens/WhatsApp_Image_2023-01-28_at_12.49.13_PM__1_-removebg-preview.png" alt="">
-            <p>Olá, sou o João Marcos e sou desenvolvedor</p>
-        </div>
+    <section class="imagem" id="home">
+
+        <img src="Imagens/WhatsApp_Image_2023-01-28_at_12.49.13_PM__1_-removebg-preview.png" alt="">
+        <p>Olá, sou o João Marcos e sou desenvolvedor</p>
+
     </section>
 
     <section class="sobre" id="sobre">
         <h1>Sobre</h1>
-        <p>Me chamo João Marcos, estudei no CTIG, mais conhecido como COTEC, realizando junto ao ensino médio o curso
-            técnico de
-            Automação Industrial, e
-            atualmente, estou cursando Analise e Desenvolvimento de Sistemas na FATEC de Guaratinguetá. Moro no interior
-            de São Paulo e sou apaixonado por programação. Já fiz estágio de um ano na startup Step2Future,
-            como desenvolvedor júnior, realizando diversos serviços como desenvolvimento web, programação embarcada com
-            arduino,
-            solda de componentes eletrônicos, solução de projetos e documentação de projetos com linguagem didática.
-            Durante minha formação como técnico em Automação Industrial no CTIG, como dito anteriormente, e na minha
-            atual graduação na FATEC, adquiri conhecimentos em Html, Css, Javascript, MySql, Php, Json, Python, C, C++,
-            Java, Bootstrap, Materialize, além de possuir diversos projetos em várias linguagens que podem ser vistos em
-            meu <a href="https://github.com/JoaoMarcosCS">perfil do GitHub.</a> </p>
+        <div class="sobre-1">
+            <p>Me chamo João Marcos, moro no interior
+                de São Paulo e sou apaixonado por programação desde os 15 anos. </p>
+            <br>
+            <img src="Imagens/sobre-imagem-1.png" alt="" class="sobre-imagem">
+        </div>
+        <div class="sobre-2">
+            <p>Estudei no colégio Técnico de Guaratinguetá, mais conhecido como CTIG, realizando junto ao ensino médio o
+                curso de Automação Industrial, e atualmente, estou
+                cursando Analise e Desenvolvimento de Sistemas na FATEC de Guaratinguetá.</p>
+            <br>
+            <img src="Imagens/sobre-imagem-2.png" alt="" class="sobre-imagem">
+        </div>
+
+        <div class="sobre-3">
+            <p>Já fiz estágio de um ano na startup Step2Future, realizando diversos serviços
+                como desenvolvimento web, programação de arduino, solda de componentes eletrônicos, solução de projetos e
+                documentação de projetos com linguagem didática.</p>
+            <br>
+            <img src="Imagens/sobre-imagem-3.png" alt="" class="sobre-imagem">
+        </div>
+
+        <div class="sobre-4">
+            <p>Possuio inglês intemediário, estudando durante 2 anos na escola de idiomas King Kelp</p>
+            <br>
+            <img src="Imagens/sobre-imagem-4.png" alt="" class="sobre-imagem">
+        </div>
+
     </section>
 
     <section class="formacao" id="formacao">
         <h1>Formação</h1>
         <ul>
-            <li>Técnico em Automação Industrial pelo Colégio Técnico Industrial de Guaratinguetá (COTEC-UNESP), formado
+            <li>Técnico em Automação Industrial pelo Colégio Técnico Industrial de Guaratinguetá (CTIG-UNESP), formado
                 no ano de 2022.</li>
             <li>
                 Graduação em Análise e Desenvolvimento de Sistemas(FATEC-Guaratinguetá) com conclusão em 2025.</li>
@@ -125,10 +140,12 @@
         <div class="contatos">
             <h1>Contato</h1>
             <ul>
-                <li><img src="Imagens/mail.png" alt=""> <a href="#">jmcsjoaomarcos@gmail.com</a></li>
-                <li><img src="Imagens/github.png" alt=""><a href=" https://github.com/JoaoMarcosCS" target="_blank"> https://github.com/JoaoMarcosCS</a></li>
-                <li><img src="Imagens/linkedin.png" alt=""><a href="www.linkedin.com/in/joão-marcos-candido-da-silva-b90371251"
-                    target="_blank">www.linkedin.com/in/joão-marcos-candido-da-silva-b90371251</a></li>
+                <li><img src="Imagens/mail.png" alt=""> <a href="">jmcsjoaomarcos@gmail.com</a></li>
+                <li><img src="Imagens/github.png" alt=""><a href=" https://github.com/JoaoMarcosCS" target="_blank">
+                        https://github.com/JoaoMarcosCS</a></li>
+                <li><img src="Imagens/linkedin.png" alt=""><a
+                        href="www.linkedin.com/in/joão-marcos-candido-da-silva-b90371251"
+                        target="_blank">www.linkedin.com/in/joão-marcos-candido-da-silva-b90371251</a></li>
             </ul>
         </div>
     </section>

@@ -1,36 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 
 :root{
-    --color-font-1:#F5F3ED;
+    --color-font-1:#f5f3edf6;
     --color-font-2:#80FFDB;
     --color-font-3:#181818;
     --color-toogle:#80FFDB;
     --color-bg-1:#252525;
-    --color-bg-2:#181818;
-    --color-bg-3:#6930C3;
+    --color-bg-2:#f5f3edf6;
+    --color-bg-3:#f5f3ed81;
     --color-bg-4:#5008C2;
     --color-bg-5:#80FFDB;    
-}
+} 
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
+i{
+    color:var(--color-bg-1);
+}
 
 header{
     width: 100%;
-    height: 60px;
-    background-color: var(--color-bg-1);
+    background-color: var(--color-bg-2);
     display: flex;
     align-items: center;/*vertical*/
+    position: sticky;
     justify-content: space-between;
-    border-left: solid 3px var(--color-font-1);
-   
+    border-left: solid 3px var(--color-font-3);
+    padding: 20px 0px 20px 0px;
+    top: 0;
+    box-shadow:  5px 5px 10px #b0b0b0,
+    -5px -5px 10px #bababa;
+    backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
     
 }
 
@@ -45,13 +54,14 @@ header{
 .menu-logo img{
     width: 30px;
     height:30px;
+    color: var(--color-font-1);
 }
 
 
 
 
 .logo-texto{
-    color: var(--color-font-1);
+    color: var(--color-font-3);
     font-family: 'Open Sans', sans-serif;
     width:100%;
     display: flex;
@@ -60,10 +70,16 @@ header{
     height: 100%;
 }
 
+.logo-texto h2{
+    margin-right:100px;
+    font-weight: bolder;
+}
+
 .menu-lateral{
     visibility: hidden;
     height: 100%;
     display: flex;
+    z-index: 100;
     justify-content: center;
     position: fixed;/*para poder sobresair sobre os outros itens*/
     align-items: flex-start;
@@ -81,7 +97,7 @@ header{
     justify-content: center;
     align-items: center;
     padding-bottom: 20px;
-    border-bottom: 3px solid var(--color-font-1);
+    border-bottom: 3px solid var(--color-font-3);
 }
 
 .menu-lateral .user-foto{
@@ -91,7 +107,7 @@ header{
     border-radius: 100%;
     width: 100px;
     height: 100px;
-    border: var(--color-font-1) solid 3px;
+    border: var(--color-font-3) solid 3px;
 
 }
 
@@ -101,10 +117,9 @@ header{
     width: 100%;
     flex-direction: column;
     align-items: center;
-    
     margin-top: 25px;
     text-align: center;
-    color: var(--color-font-1);
+    color: var(--color-font-3);
 }
 
 .user-detalhes small{
@@ -113,19 +128,19 @@ header{
 
 .menu-lateral ul{
     display: flex;
-    margin-top: 10px;
+    margin-top: -30vh;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding-left: 15px;
     width: 100%;
-    height: auto;
+    /*height: auto;*/
     flex-wrap: wrap;
 }
 
 .menu-lateral ul li{
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     margin: 10px 0px;
     flex-direction: row;
     width: 100%;
@@ -134,7 +149,7 @@ header{
 .menu-lateral ul li a{
     text-decoration: none;
     margin-left: 3px;
-    color: var(--color-font-1);
+    color: var(--color-font-3);
 }
 
 .menu-lateral ul li img{
@@ -147,6 +162,9 @@ header{
     display: none;
     justify-content: center;
     align-items: center;
+    position: sticky;
+    width: 100%;
+    
 
 }
 
@@ -162,7 +180,7 @@ header{
 .menu-list li a{
     padding-left: 5px;
     text-decoration: none;
-    color: var(--color-font-1);
+    color: var(--color-font-3);
 }
 
 .menu-list li img{
@@ -191,69 +209,134 @@ header{
 
 .imagem{
     width: 100%;
-    height: 470px;
+    height: 70vh;
     justify-content: center;
     align-items: center;
     display: flex;
     background-color: var(--color-bg-3);
+    flex-wrap: wrap;
 }
-
+/*
 .imagem .card-imagem{
     width: 90%;
-    height: 390px;
-    background-color: var(--color-bg-1);
+    height: 60vh;
+    box-shadow:  5px 5px 10px #b0b0b0,
+             -5px -5px 10px #bababa;
+    background-color: var(--color-bg-2);
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     display: flex;
-    box-shadow:  22px 22px 34px #2d046d,
-             -22px -22px 34px #730cff;
     border-radius: 10px;
 }
-
-.imagem .card-imagem img{
-    width: 190px;
-    height: 200px;
+*/
+.imagem  img{
+    width: 250px;
+    height: 260px;
     border: 3px solid var(--color-font-1);
-    background-color: var(--color-bg-2);
-    border-radius: 100%;
-    
+    background-color: var(--color-bg-1);
+    border-radius: 50%;
+    box-shadow:  5px 5px 10px #b0b0b0,
+             -5px -5px 10px #bababa;
 }
 
-.imagem .card-imagem p{
+.imagem  p{
     justify-content: center;
     align-items: center;
     display: flex;
-    font-size: 32px;
-    color: var(--color-font-2);
+    font-size: 35px;
+    margin-top: -20vh;
+    color: var(--color-font-3);
     text-align: center;
-    font-weight: bolder;
+    font-weight: 800;
     
 }
 
 .sobre{
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
-    background-color: var(--color-bg-4);
-    color: var(--color-font-1);
-    padding: 30px 30px 30px 10px;
+    background-color: var(--color-bg-2);
+    color: var(--color-font-3);
+    padding: 30px 10px 30px 10px;
 
 }
 .sobre h1{
     margin-bottom: 10px;
     border-bottom: 2px solid var(--color-bg-3);
+    text-align: left;
+    width: 100%;
+    
+}
+.sobre-1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width:100%;
+    flex-wrap: wrap;
 }
 
-.sobre p{
-    font-size: 17px;
+.sobre-1 p{
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    padding-top:5vh;
+    text-align: left;
+   
+}
+
+.sobre-imagem{
+    width: 350px;
+    height: 350px;
+    margin-top: -20px;
+}
+.sobre-2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.sobre-2 p{
+    padding-top: 5vh;
+    font-size: 20px;
+    text-align: end;
     letter-spacing: 0.5px;
 }
 
-.sobre a{
-    color: var(--color-font-1);
+
+.sobre-3{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+   
+}
+
+.sobre-3 p{
+    padding-top: 5vh;
+    font-size: 20px;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+.sobre-4{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+   
+}
+
+.sobre-4 p{
+    padding-top: 5vh;
+    font-size: 20px;
+    text-align: right;
+    letter-spacing: 0.5px;
 }
 
 .formacao{
@@ -262,26 +345,27 @@ header{
     align-items: center;
     flex-wrap: wrap;
     background-color: var(--color-bg-3);
-    color: var(--color-font-1);
+    color: var(--color-font-3);
     padding: 30px;
 }
 
 .formacao h1{
-    border-bottom: solid 2px var(--color-bg-4);
+    border-bottom: solid 2px var(--color-bg-2);
 }
 
 .formacao ul{
-    margin-top: 25px;
+    margin-top: 5vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
 }
 
 .formacao ul li{
     padding-bottom: 20px;
+    list-style: "> ";
     font-weight: 500;
-    font-size: 17px;
+    font-size: 20px;
     letter-spacing: 0.5px;
 }
 
@@ -290,9 +374,9 @@ header{
     justify-content: center;
     align-items: center;
     width: 100%;
-    color: var(--color-font-1);
+    color: var(--color-font-3);
     flex-wrap: wrap;
-    background-color: var(--color-bg-4);
+    background-color: var(--color-bg-2);
     padding: 10px;
 }
 
@@ -302,15 +386,17 @@ header{
     align-items: center;
     flex-wrap: wrap;
     background-color: var(--color-bg-1);
-    color: var(--color-font-1);
+    color: var(--color-font-3);
     margin-bottom: 20px;
     border-radius: 10px;
     padding: 10px;
-    width: 90%;
+    width: 60vh;
 }
 .projetos h1{
     margin-top: 10px;
     margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
     border-bottom: 2px solid var(--color-bg-3);
 }
 
@@ -321,7 +407,7 @@ header{
 }
 
 .projetos .card-projeto a{
-    color: var(--color-font-1);
+    color: var(--color-font-3);
     margin-top: 5px;
     text-decoration: none;
     font-size: 15px;
@@ -335,7 +421,7 @@ header{
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
-    background-color: var(--color-bg-5);
+    background-color: var(--color-font-3);
     color:var(--color-font-3);
     padding: 10px;
 }
@@ -366,7 +452,6 @@ header{
     display: flex;
     justify-content: center;
     padding: 10px 10px 20px 0px;
-    background-color: var(--color-bg-5);
     align-items: center;
 
 }
@@ -385,66 +470,47 @@ header{
 
 }
 
-/*
-.tema{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media(min-width:800px){
+    .menu-lateral{
+        display: none;
+    }
+    .menu-logo{
+        display: none;
+    }
+    .menu-list{
+        display: flex;
+    }
+    .imagem{height: 100vh;}
+
+    .card-imagem{
+        flex-direction: row;
+        background-color: yellow;
+       
+    }
+    .imagem .card-imagem img{
+      width: 250px;
+      height: 260px;
+    }
+
+    .imagem .card-imagem p{
+     margin-left: 10px;
+     font-size: 40px;
+     letter-spacing: 0.5px;
+     width: 50%;
+    }
+
+    .projetos h1{
+        width: 100%;
+        text-align: center;
+    }
+
+    .card-projeto{
+        width: 40vh;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 10px;
+    }
+    
+
 
 }
-
-.tema img{
-    width: 30px;
-    height: 30px;
-}
-
-input[type=checkbox]{
-    height: 0;
-    width: 0;
-    visibility: hidden;
-}
-
-.toggle{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.toggle >label {
-    cursor: pointer;
-    text-indent: -9999px;
-    width: 52px;
-    height: 27px;
-    background: var(--color-toogle);
-    float: right;
-    border-radius: 100px;
-    position: relative;
-}
-
-.toggle> label::after{
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border-radius: 90px;
-    transition: 0.3s;
-}
-
-input:checked + label {/*cor que vai ficar quando o o modo escuro estiver ativo*/
- /*   background-color: #230b4d;
-}
-
-input:checked + label::after {
-    left: calc(100% - 5px);
-    transform: translateX(-100%);
-}
-
-label:active:after {
-    width: 45px;
-}
-
-*/
