@@ -484,6 +484,7 @@ box-shadow:  7px 7px 12px #242424,
     -5px -5px 10px #bababa;
     padding: 3px;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .contato .contatos ul li{
