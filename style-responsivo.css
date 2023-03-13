@@ -12,6 +12,7 @@
     --color-bg-3:#f5f3ed81;
     --color-bg-4:#5008C2;
     --color-bg-5:#80FFDB;    
+    --color-h1-1:#03969c;
 } 
 
 *{
@@ -40,6 +41,7 @@ header{
     -5px -5px 10px #bababa;
     backdrop-filter: blur( 20px );
 -webkit-backdrop-filter: blur( 20px );
+z-index: 90;
     
 }
 
@@ -51,10 +53,9 @@ header{
     align-items: center;
 }
 
-.menu-logo img{
-    width: 30px;
-    height:30px;
-    color: var(--color-font-1);
+.menu-logo i{
+    font-size: 150%;
+    color: var(--color-font-3);
 }
 
 
@@ -70,8 +71,8 @@ header{
     height: 100%;
 }
 
-.logo-texto h2{
-    margin-right:100px;
+.logo-texto h1{
+    margin-right:85px;
     font-weight: bolder;
 }
 
@@ -83,7 +84,7 @@ header{
     justify-content: center;
     position: fixed;/*para poder sobresair sobre os outros itens*/
     align-items: flex-start;
-    background-color: var(--color-bg-2);
+    background-color: var(--color-bg-1);
     transition: 0.3s all ease;
     flex-wrap: wrap;
     box-shadow:  20px 20px 60px #0c0c0c,
@@ -97,7 +98,15 @@ header{
     justify-content: center;
     align-items: center;
     padding-bottom: 20px;
-    border-bottom: 3px solid var(--color-font-3);
+    border-bottom: 3px solid var(--color-font-1);
+}
+
+.user-info h1{
+    width: 100%;
+    color: var(--color-font-1);
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 0.5px;
 }
 
 .menu-lateral .user-foto{
@@ -106,8 +115,9 @@ header{
 .menu-lateral .user-info img{
     border-radius: 100%;
     width: 100px;
-    height: 100px;
-    border: var(--color-font-3) solid 3px;
+    height: 105px;
+    border: var(--color-font-1) solid 3px;
+    background-color: var(--color-font-1);
 
 }
 
@@ -117,9 +127,9 @@ header{
     width: 100%;
     flex-direction: column;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 20px;
     text-align: center;
-    color: var(--color-font-3);
+    color: var(--color-font-1);
 }
 
 .user-detalhes small{
@@ -141,15 +151,29 @@ header{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    margin: 10px 0px;
+    margin: 15px 0px;
     flex-direction: row;
     width: 100%;
     list-style: none;
+    transition: 0.3s ease all;
+}
+
+.menu-lateral ul li a:hover{
+    color:yellow;
+    border-radius: 8px;
+    background-color: var(--color-h1-1);
+
 }
 .menu-lateral ul li a{
     text-decoration: none;
-    margin-left: 3px;
-    color: var(--color-font-3);
+    margin-left: 9px;
+    font-size: 20px;
+    text-align: center;
+    color: var(--color-font-1);
+}
+.menu-lateral ul li i{
+    color: var(--color-font-1);
+    
 }
 
 .menu-lateral ul li img{
@@ -263,12 +287,18 @@ header{
     padding: 30px 10px 30px 10px;
 
 }
+
+#sobre-titulo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
 .sobre h1{
     margin-bottom: 10px;
-    border-bottom: 2px solid var(--color-bg-3);
     text-align: left;
-    width: 100%;
-    
+    color: var(--color-h1-1);
+    border-bottom: solid 2px var(--color-h1-1);
 }
 .sobre-1{
     display: flex;
@@ -350,7 +380,9 @@ header{
 }
 
 .formacao h1{
-    border-bottom: solid 2px var(--color-bg-2);
+    border-bottom: solid 2px var(--color-h1-1);
+    color: var(--color-h1-1);
+    
 }
 
 .formacao ul{
@@ -380,26 +412,38 @@ header{
     padding: 10px;
 }
 
+
 .projetos .card-projeto{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: var(--color-bg-1);
-    color: var(--color-font-3);
-    margin-bottom: 20px;
+    background-color: var(--color-h1-1);
+    margin-bottom: 40px;
     border-radius: 10px;
     padding: 10px;
-    width: 60vh;
-}
-.projetos h1{
-    margin-top: 10px;
-    margin-bottom: 20px;
-    width: 100%;
-    text-align: center;
-    border-bottom: 2px solid var(--color-bg-3);
+    width: 320px;
+    z-index: 80;
+    box-shadow:  5px 5px 10px #b0b0b0,
+    -5px -5px 10px #bababa;
+    backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
 }
 
+#projetos-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.projetos h1{
+    margin-top: 10px;
+    margin-bottom: 5vh;
+    text-align: center;
+    border-bottom: 2px solid var(--color-h1-1);
+    color: var(--color-h1-1);
+}
 .projetos .card-projeto img{
     width: 290px;
     border-radius: 10px;
@@ -407,10 +451,10 @@ header{
 }
 
 .projetos .card-projeto a{
-    color: var(--color-font-3);
-    margin-top: 5px;
+    color: var(--color-font-1);
+    margin-top: 10px;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 20px;
     letter-spacing: 0.5px;
     cursor: pointer;
 }
@@ -421,21 +465,26 @@ header{
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
-    background-color: var(--color-font-3);
-    color:var(--color-font-3);
+    margin-top: 10vh;
+    color:var(--color-font-1);
     padding: 10px;
 }
 
 .contato .contatos{
-    width: 90%;
+    width: 95%;
     display: flex;
     justify-content: left;
     align-items: center;
     flex-wrap: wrap;
+    padding: 10px;
+   
+    
+    
 }
 
 .contato .contatos h1{
-    border-bottom: 2px solid var(--color-bg-1);
+    border-bottom: 2px solid var(--color-h1-1);
+    color: var(--color-h1-1);
     margin-top: 10px;
     margin-bottom: 20px;
 }
@@ -444,6 +493,9 @@ header{
     display: flex;
     justify-content: left;
     align-items: center;
+    box-shadow:  5px 5px 10px #b0b0b0,
+    -5px -5px 10px #bababa;
+    padding: 3px;
     flex-wrap: wrap;
 }
 
@@ -458,7 +510,10 @@ header{
 .contato .contatos ul li img{
     width: 30px;
     height: 30px;
-    margin-right: 4px;
+}
+
+.contatos ul li i{
+    color: var(--color-font-3);
 }
 
 .contato .contatos ul li a{
@@ -467,7 +522,19 @@ header{
     letter-spacing: 0.5px;
     font-size: 17px;
     font-weight: 600;
+    margin-left: 5px;
 
+}
+
+footer{
+    justify-content: center;
+    background-color: var(--color-bg-1);
+    align-items: center;
+    display: flex;
+    width: 100%;
+    margin-top: 7vh;
+    color: var(--color-font-1);
+    
 }
 
 @media(min-width:800px){
