@@ -8,7 +8,7 @@ document.addEventListener("mouseup", function(event){
         //obj1.style.display="none";
         obj1.style.width="0%";
         obj1.style.opacity="0";
-        console.log("fora do menu")
+      
     }
 })
 
@@ -20,6 +20,6 @@ document.addEventListener("click", function(event){
         obj2.style.width="70%";
         obj2.style.opacity="1";
         obj2.style.visibility="visible";
-        console.log("dedededed")
+    
     }
 })
