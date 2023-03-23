@@ -17,7 +17,7 @@ document.addEventListener("click", function(event){
     var btn_menu=document.getElementById("menu-btn");
     if(btn_menu.contains(event.target)){
        // obj2.style.display="flex";
-        obj2.style.width="90%";
+        obj2.style.width="85%";
         obj2.style.opacity="1";
         obj2.style.visibility="visible";
     
